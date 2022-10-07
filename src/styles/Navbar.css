@@ -1,0 +1,11 @@
+.navbar-container {
+    display: inline-block;
+}
+
+.nav-item {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: black;
+    font-size: 13px;
+    font-weight: 500;
+}
