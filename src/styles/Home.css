@@ -1,0 +1,15 @@
+.home-container-small img {
+    display: block;
+    padding-top: 15px;
+}
+
+.home-container-large {
+    display: flex;
+    padding-top: 15px;
+}
+
+.main-content {
+    width: 70%;
+    float: right;
+    margin-right: 10%;
+}

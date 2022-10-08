@@ -1,5 +1,8 @@
 .navbar-container {
-    display: inline-block;
+    text-align: right;
+    margin-right: 10px;
+    width: 30%;
+    float: left;
 }
 
 .nav-item {
@@ -8,4 +11,8 @@
     color: black;
     font-size: 13px;
     font-weight: 500;
+}
+
+.nav-item:hover {
+    color: red;
 }

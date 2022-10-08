@@ -48,7 +48,7 @@ export default function Navbar() {
         );
     } else {
         return (
-            <div className="navbar-container">
+            <div className="navbar-container" style={{paddingLeft: width / 10}}>
                 <div className="nav-item">
                     <Link to="../" style={{ textDecoration: 'none' }}>
                         <p className="nav-item">J.</p>
