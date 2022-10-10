@@ -29,3 +29,11 @@
 .app-container {
   font-family: "Helvetica Neue",Arial,sans-serif;
 }
+
+h3 {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}

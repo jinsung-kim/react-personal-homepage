@@ -14,9 +14,11 @@ export default class Photos extends Component {
 
     render() {
         return (
-            <div className="photos-container">
+            <div className={`about-container${ this.state.width < 500 ? "-small" : ""}`}>
                 <Navbar />
-                <p>Photos page - { this.state.width }</p>
+                <div className="grid-view">
+                    
+                </div>
             </div>
         );
     }

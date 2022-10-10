@@ -3,7 +3,7 @@
     padding-top: 15px;
 }
 
-.home-container-large {
+.home-container {
     display: flex;
     padding-top: 15px;
 }
@@ -11,5 +11,5 @@
 .main-content {
     width: 70%;
     float: right;
-    margin-right: 10%;
+    /* margin-right: 10%; */
 }

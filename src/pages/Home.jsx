@@ -19,7 +19,7 @@ export default function Home() {
         );
     } else {
         return (
-            <div className="home-container-large">
+            <div className="home-container">
                 <Navbar />
                 <div className="main-content">
                     <img src={ HomeImage } alt="SF is home" style={{ width: width - (width / 3), maxWidth: 700, paddingLeft: 20 }}/>

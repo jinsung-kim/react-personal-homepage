@@ -1,8 +1,8 @@
 .navbar-container {
     text-align: right;
     margin-right: 10px;
-    width: 30%;
     float: left;
+    padding-top: 15px;
 }
 
 .nav-item {

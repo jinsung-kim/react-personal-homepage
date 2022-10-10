@@ -44,11 +44,17 @@ export default function Navbar() {
                         <p className="nav-item">BLOG</p>
                     </a>
                 </div>
+
+                <div className="nav-item">
+                    <a target="_blank" href="https://archived-js.web.app/" style={{ textDecoration: 'none' }} rel="noreferrer">
+                        <p className="nav-item">ARCHIVE</p>
+                    </a>
+                </div>
             </div>
         );
     } else {
         return (
-            <div className="navbar-container" style={{paddingLeft: width / 10}}>
+            <div className="navbar-container" style={{paddingLeft: width / 10, width: 100}}>
                 <div className="nav-item">
                     <Link to="../" style={{ textDecoration: 'none' }}>
                         <p className="nav-item">J.</p>
@@ -82,6 +88,12 @@ export default function Navbar() {
                 <div className="nav-item">
                     <a target="_blank" href="https://jinsung-kim.github.io/" style={{ textDecoration: 'none' }} rel="noreferrer">
                         <p className="nav-item">BLOG</p>
+                    </a>
+                </div>
+
+                <div className="nav-item">
+                    <a target="_blank" href="https://archived-js.web.app/" style={{ textDecoration: 'none' }} rel="noreferrer">
+                        <p className="nav-item">ARCHIVE</p>
                     </a>
                 </div>
             </div>

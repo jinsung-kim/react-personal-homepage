@@ -1,0 +1,16 @@
+.work-container {
+    display: flex;
+    padding-top: 15px;
+}
+
+#resume-link {
+    color: red;
+}
+
+#list-links {
+    color: black;
+}
+
+a {
+    color: red;
+}

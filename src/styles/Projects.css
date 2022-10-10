@@ -1,0 +1,13 @@
+.projects-container {
+    display: flex;
+    padding-top: 15px;
+}
+
+.main-content-small {
+    width: 90%;
+    margin: auto;
+}
+
+.main-content, .main-content-small p {
+    color: grey;
+}
