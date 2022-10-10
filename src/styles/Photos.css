@@ -1,0 +1,21 @@
+.photos-container {
+    display: flex;
+    padding-top: 15px;
+}
+
+.grid-view-large {
+    width: 70%;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.grid-view-small {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    padding-top: 15px;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
