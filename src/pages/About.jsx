@@ -2,11 +2,17 @@ import React from "react";
 import { useWindowDimensions } from "../helpers/ScreenSize";
 
 import Navbar from "../components/Navbar";
-// import Contact from "../components/Contact";
+import Self from "../images/self.png";
 import "../styles/About.css";
 
 export default function About() {
     const { width } = useWindowDimensions();
+    var imgWidth = 0;
+    if (width < 500) {
+        imgWidth = width - 100;
+    } else {
+        imgWidth = width / 2;
+    }
 
     return (
         <div className={`about-container${ width < 500 ? "-small" : ""}`}>
@@ -18,8 +24,10 @@ export default function About() {
                 </p>
                 <p>I am a New York University graduate with a degree in Computer Science and a minor in mathematics.</p>
 
+                <img src={Self} style={{ width: imgWidth, height: imgWidth, justifySelf: "center", maxWidth: 300, maxHeight: 300 }} alt="self" />
+
                 <p>
-                    My work often marries the intersection between technology and the intricacies of societal connection.
+                    My work often marries the intersection between technology and societal connection.
                     I enjoy subtle details and intentional design in everyday objects and tools. I aim to create effortless experiences.
                 </p>
 
