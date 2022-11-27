@@ -30,7 +30,7 @@ export default class Photos extends Component {
                 {Object.entries(cache).map(module => {
                     return (
                         <div style={{ padding: 10, margin: 10 }} key={ module }>
-                            <img style={{width: 100, margin: 'auto', display: 'block'}} src={module[1]} alt="this is "/>
+                            <img style={{width: this.props.width / 3, maxWidth: 200, margin: 'auto', display: 'block'}} src={module[1]} alt="this is "/>
                         </div>
                     )
                 })}

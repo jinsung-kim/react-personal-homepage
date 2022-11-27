@@ -45,11 +45,11 @@ export default function Navbar() {
                     </a>
                 </div>
 
-                <div className="nav-item">
+                {/* <div className="nav-item">
                     <a target="_blank" href="https://archived-js.web.app/" style={{ textDecoration: 'none' }} rel="noreferrer">
                         <p className="nav-item">ARCHIVE</p>
                     </a>
-                </div>
+                </div> */}
             </div>
         );
     } else {
@@ -91,11 +91,11 @@ export default function Navbar() {
                     </a>
                 </div>
 
-                <div className="nav-item">
+                {/* <div className="nav-item">
                     <a target="_blank" href="https://archived-js.web.app/" style={{ textDecoration: 'none' }} rel="noreferrer">
                         <p className="nav-item">ARCHIVE</p>
                     </a>
-                </div>
+                </div> */}
             </div>
         );
     }
