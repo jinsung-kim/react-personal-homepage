@@ -1,4 +1,8 @@
-import React from "react";
+import { 
+    React, 
+    useEffect 
+} from "react";
+
 import {
     BrowserRouter,
     Routes,
@@ -14,6 +18,14 @@ import Work from "./pages/Work";
 import Projects from "./pages/Projects";
 import Photos from "./pages/Photos";
 
+const RedirectUrl = ({ url }) => {
+    useEffect(() => {
+      window.location.href = url;
+    }, [url]);
+  
+    return <h5>Redirecting...</h5>;
+};
+
 export default function App() {
     const { width } = useWindowDimensions();
     return (
@@ -25,6 +37,8 @@ export default function App() {
                   <Route path="/work" element={ <Work /> } />
                   <Route path="/projects" element={ <Projects /> } />
                   <Route path="/photos" element={ <Photos width={ width }/> } />
+                  <Route path="/blog" element={<RedirectUrl url="https://jinsung-kim.github.io/" />} />
+                  <Route path="/books" element={<RedirectUrl url="https://jinsung-kim.github.io/" />} />
               </Routes>
           </BrowserRouter>
         </div>
