@@ -27,28 +27,28 @@ export default function About() {
                 {/* <img src={Self} style={{ width: imgWidth, height: imgWidth, justifySelf: "center", maxWidth: 300, maxHeight: 300 }} alt="self" /> */}
 
                 <p>
-                    My work often focuses on the intersection between technology and connection.
-                    I enjoy subtle details and intentional design, aiming to create effortless experiences.
+                    My main goal is to connect humans with technology.
                 </p>
 
-                <p>Currently, my main interests are:</p>
+                <p>I consider myself a full stack developer - my main interests are:</p>
                 <ul>
-                    <li>Frontend and Human Computer Interaction</li>
-                    <li>Backend and infrastructure design</li>
+                    <li>Human Computer Interaction, Intentional Design</li>
+                    <li>Infrastructure Design / Implementation</li>
+                    <li>Mobile Apps</li>
                 </ul>
 
                 <p>Outside of my line of work, I really enjoy:</p>
                 <ul>
                     <li>Clothes - boots and old denim</li>
                     <li>Reading - non-fiction and philosophy</li>
-                    <li>Music - playing violin + bass guitar</li>
-                    <li>Long distance running + heavy exercise</li>
+                    <li>Bass guitar</li>
+                    <li>Distance running and exercise</li>
                 </ul>
 
                 <p>
-                    My resume can be viewed by clicking <a id="resume-link" target="_blank" href="https://us-central1-jinkim-backend.cloudfunctions.net/app/resume" rel="noreferrer">
+                    My resume and contact information can be viewed by clicking <a id="resume-link" target="_blank" href="https://us-central1-jinkim-backend.cloudfunctions.net/app/resume" rel="noreferrer">
                         here
-                    </a>.
+                    </a>. Feel free to reach out for potential contract work or interesting opportunities.
                 </p>
             </div>
         </div>

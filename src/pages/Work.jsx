@@ -19,6 +19,8 @@ export default function Work() {
                     </a>.
                 </p>
 
+                <p>I am currently a SDE at <a target="_blank" href="https://www.nudgetext.com/" rel="noreferrer">The Nudge</a>, a digital planner start up.</p>
+
                 <p>I co-authored two conference papers researching for the NYU Langone Hospital. I helped create 
                     prototypes to track mobility progress for low vision patients and those affected by MS.</p>
 
@@ -30,7 +32,7 @@ export default function Work() {
                             </a>
                         </li>
                         <li>
-                            <a id="list-links" href="https://cscw.acm.org/2022/" target="_blank" rel="noreferrer">
+                            <a id="list-links" href="https://dl.acm.org/doi/10.1145/3555622" target="_blank" rel="noreferrer">
                                 Digital Technologies In Orientation And Mobility Instruction For People Who Are Blind Or Have Low Vision (CSCW 2022)
                             </a>
                         </li>
