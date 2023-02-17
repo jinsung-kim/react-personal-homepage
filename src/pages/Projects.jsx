@@ -52,7 +52,7 @@ export default function Projects() {
             >
               Restaurant Reservator Bot (RESY)
             </a>{" "}
-            - A flexible Resy bot that allows you to book reservations
+            - a flexible Resy bot that allows you to book reservations
             automatically for restaurants around any city for any group.
           </li>
           <li>
@@ -63,7 +63,7 @@ export default function Projects() {
             >
               Project Euler
             </a>{" "}
-            - Challenging mathematical/computer programming problems for fun.
+            - challenging mathematical/computer programming problems for fun.
           </li>
           <li>
             <a

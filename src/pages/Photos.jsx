@@ -1,15 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import Navbar from "../components/Navbar";
 import "../styles/Photos.css";
 
-var cache = {};
-
-function importAll(r) {
-  r.keys().forEach((key) => (cache[key] = r(key)));
-}
-
 export default function Photos({ width }) {
+  const [cache, setCache] = useState({});
+
+  const importAll = (r) => {
+    var tempCache = {};
+    r.keys().forEach((key) => (tempCache[key] = r(key)));
+    setCache(tempCache);
+  };
+
   useEffect(() => {
     // Note from the docs -> Warning: The arguments passed to require.context must be literals!
     importAll(require.context("./photos", false, /\.(png|jpe?g|svg)$/));
