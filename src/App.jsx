@@ -2,14 +2,13 @@ import { React, useEffect } from "react";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./styles/App.css";
-import { useWindowDimensions } from "./helpers/ScreenSize";
 
 // Importing Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import Projects from "./pages/Projects";
-import Photos from "./pages/Photos";
+// import Photos from "./pages/Photos";
 
 const RedirectUrl = ({ url }) => {
   useEffect(() => {
@@ -20,7 +19,6 @@ const RedirectUrl = ({ url }) => {
 };
 
 export default function App() {
-  const { width } = useWindowDimensions();
   return (
     <div className='app-container'>
       <BrowserRouter>
@@ -29,7 +27,6 @@ export default function App() {
           <Route path='/about' element={<About />} />
           <Route path='/work' element={<Work />} />
           <Route path='/projects' element={<Projects />} />
-          <Route path='/photos' element={<Photos width={width} />} />
           <Route
             path='/blog'
             element={<RedirectUrl url='https://jinsung-kim.github.io/' />}
@@ -37,6 +34,10 @@ export default function App() {
           <Route
             path='/books'
             element={<RedirectUrl url='https://jinsung-kim.github.io/' />}
+          />
+          <Route
+            path='/archive'
+            element={<RedirectUrl url='https://archived-js.web.app/' />}
           />
         </Routes>
       </BrowserRouter>

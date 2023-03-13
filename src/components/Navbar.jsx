@@ -33,11 +33,11 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className='nav-item'>
+        {/* <div className='nav-item'>
           <Link to='../photos' style={{ textDecoration: "none" }}>
             <p className='nav-item'>PHOTOS</p>
           </Link>
-        </div>
+        </div> */}
 
         <div className='nav-item'>
           <a
@@ -50,11 +50,16 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* <div className="nav-item">
-                    <a target="_blank" href="https://archived-js.web.app/" style={{ textDecoration: 'none' }} rel="noreferrer">
-                        <p className="nav-item">ARCHIVE</p>
-                    </a>
-                </div> */}
+        <div className='nav-item'>
+          <a
+            target='_blank'
+            href='https://archived-js.web.app/'
+            style={{ textDecoration: "none" }}
+            rel='noreferrer'
+          >
+            <p className='nav-item'>ARCHIVE</p>
+          </a>
+        </div>
       </div>
     );
   } else {
@@ -87,11 +92,11 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className='nav-item'>
+        {/* <div className='nav-item'>
           <Link to='../photos' style={{ textDecoration: "none" }}>
             <p className='nav-item'>PHOTOS</p>
           </Link>
-        </div>
+        </div> */}
 
         <div className='nav-item'>
           <a
@@ -104,11 +109,16 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* <div className="nav-item">
-                    <a target="_blank" href="https://archived-js.web.app/" style={{ textDecoration: 'none' }} rel="noreferrer">
-                        <p className="nav-item">ARCHIVE</p>
-                    </a>
-                </div> */}
+        <div className='nav-item'>
+          <a
+            target='_blank'
+            href='https://archived-js.web.app/'
+            style={{ textDecoration: "none" }}
+            rel='noreferrer'
+          >
+            <p className='nav-item'>ARCHIVE</p>
+          </a>
+        </div>
       </div>
     );
   }
