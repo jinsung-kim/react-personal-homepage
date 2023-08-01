@@ -92,12 +92,6 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* <div className='nav-item'>
-          <Link to='../photos' style={{ textDecoration: "none" }}>
-            <p className='nav-item'>PHOTOS</p>
-          </Link>
-        </div> */}
-
         <div className='nav-item'>
           <a
             target='_blank'

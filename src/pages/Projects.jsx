@@ -39,7 +39,7 @@ export default function Projects() {
               target='_blank'
               rel='noreferrer'
             >
-              Algorithmic Dressing
+              algorithmic dressing
             </a>{" "}
             - generating combinations of clothes based on color blocking,
             silhouette, and weather with the aim to find new interesting looks.
@@ -50,7 +50,7 @@ export default function Projects() {
               target='_blank'
               rel='noreferrer'
             >
-              Restaurant Reservator Bot (RESY)
+              reservation bot (for resy)
             </a>{" "}
             - a flexible Resy bot that allows you to book reservations
             automatically for restaurants around any city for any group.
@@ -61,20 +61,18 @@ export default function Projects() {
               target='_blank'
               rel='noreferrer'
             >
-              Project Euler
+              project euler
             </a>{" "}
             - challenging mathematical/computer programming problems for fun.
           </li>
           <li>
             <a
-              href='https://main.d2i0srt2n31is8.amplifyapp.com/'
+              href='https://github.com/jinsung-kim/'
               target='_blank'
               rel='noreferrer'
             >
-              'alternatives'
-            </a>{" "}
-            - a fashion focused search engine to help people find alternatives
-            for pieces.
+              a bunch more you can see clicking here.
+            </a>
           </li>
         </ul>
       </div>

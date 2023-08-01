@@ -1,16 +1,20 @@
 .work-container {
-    display: flex;
-    padding-top: 15px;
+  display: flex;
+  padding-top: 15px;
 }
 
 #resume-link {
-    color: red;
+  color: red;
 }
 
 #list-links {
-    color: black;
+  color: black;
+}
+
+#list-links:hover {
+  color: red;
 }
 
 a {
-    color: red;
+  color: red;
 }

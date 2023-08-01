@@ -16,7 +16,7 @@ export default function Contact() {
             window.open("mailto:jinsungkim1210@gmail.com", "_blank")
           }
         >
-          jinsungkim1210@gmail.com
+          jinsungkim1210 [at] gmail [dot] com
         </p>
         <p>{d.getFullYear()}</p>
       </div>
@@ -33,7 +33,7 @@ export default function Contact() {
             window.open("mailto:jinsungkim1210@gmail.com", "_blank")
           }
         >
-          jinsungkim1210@gmail.com
+          jinsungkim1210 [at] gmail [dot] com
         </p>
         <p>{d.getFullYear()}</p>
       </div>

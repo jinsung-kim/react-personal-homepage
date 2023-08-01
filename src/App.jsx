@@ -27,6 +27,7 @@ export default function App() {
           <Route path='/about' element={<About />} />
           <Route path='/work' element={<Work />} />
           <Route path='/projects' element={<Projects />} />
+          {/* Just redirects to my other websites. */}
           <Route
             path='/blog'
             element={<RedirectUrl url='https://jinsung-kim.github.io/' />}

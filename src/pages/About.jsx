@@ -18,23 +18,14 @@ export default function About() {
         </p>
         <p>
           I am a New York University graduate with a degree in Computer Science
-          and a minor in mathematics.
+          and a minor in mathematics. I shortly pursued a Master's degree at NYU
+          - but put it aside to work in the industry.
         </p>
-
-        <p>
-          I consider myself a full stack developer - my main interests are the
-          following:
-        </p>
-        <ul>
-          <li>Human computer interaction</li>
-          <li>Infrastructure design</li>
-          <li>Mobile apps</li>
-        </ul>
 
         <p>Outside of my line of work, I really enjoy:</p>
         <ul>
           <li>Clothes - boots and old denim</li>
-          <li>Reading and writing - non-fiction and philosophy</li>
+          <li>Reading and writing - particularly non-fiction + philosophy</li>
           <li>Bass guitar</li>
           <li>Distance running and exercise</li>
         </ul>
@@ -50,8 +41,7 @@ export default function About() {
             here
           </a>
           . Feel free to reach out for potential contract work, interesting
-          opportunities or even just to say hello. Despite my natural
-          introvertedness, I enjoy talking to like-minded individuals.
+          opportunities or even just to say hello.
         </p>
       </div>
     </div>
