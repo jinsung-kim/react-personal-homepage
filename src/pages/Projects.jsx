@@ -12,9 +12,7 @@ export default function Projects() {
       <Navbar />
       <div className={`main-content${width < 500 ? "-small" : ""}`}>
         <h3>Projects</h3>
-
-        <p>I work on things that genuinely interest me.</p>
-
+        <p>I work on things that interest me.</p>
         <ul>
           <li>
             <a href='https://romr.app/' target='_blank' rel='noreferrer'>
@@ -30,8 +28,7 @@ export default function Projects() {
             >
               chess
             </a>{" "}
-            - a chess engine in Python, with customizable play styles and chess
-            theory using mini max game theory.
+            - a chess engine in Python, with customizable play styles.
           </li>
           <li>
             <a
@@ -54,25 +51,6 @@ export default function Projects() {
             </a>{" "}
             - a flexible Resy bot that allows you to book reservations
             automatically for restaurants around any city for any group.
-          </li>
-          <li>
-            <a
-              href='https://github.com/jinsung-kim/project-euler'
-              target='_blank'
-              rel='noreferrer'
-            >
-              project euler
-            </a>{" "}
-            - challenging mathematical/computer programming problems for fun.
-          </li>
-          <li>
-            <a
-              href='https://github.com/jinsung-kim/'
-              target='_blank'
-              rel='noreferrer'
-            >
-              a bunch more you can see clicking here.
-            </a>
           </li>
         </ul>
       </div>

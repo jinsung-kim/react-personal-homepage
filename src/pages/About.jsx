@@ -18,31 +18,16 @@ export default function About() {
         </p>
         <p>
           I am a New York University graduate with a degree in Computer Science
-          and a minor in mathematics. I shortly pursued a Master's degree at NYU
-          - but put it aside to work in the industry.
+          and a minor in mathematics.
         </p>
 
-        <p>Outside of my line of work, I really enjoy:</p>
+        <p>Outside of work, I really enjoy:</p>
         <ul>
-          <li>Clothes - boots and old denim</li>
-          <li>Reading and writing - particularly non-fiction + philosophy</li>
+          <li>Clothes</li>
+          <li>Reading</li>
           <li>Bass guitar</li>
-          <li>Distance running and exercise</li>
+          <li>Surfing</li>
         </ul>
-
-        <p>
-          My resume and contact information can be viewed by clicking{" "}
-          <a
-            id='resume-link'
-            target='_blank'
-            href='https://us-central1-jinkim-backend.cloudfunctions.net/app/resume'
-            rel='noreferrer'
-          >
-            here
-          </a>
-          . Feel free to reach out for potential contract work, interesting
-          opportunities or even just to say hello.
-        </p>
       </div>
     </div>
   );
