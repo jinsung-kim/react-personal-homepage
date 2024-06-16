@@ -40,8 +40,7 @@ const WORK_EXPERIENCES = [
       "Assisted clients with API usage, enhanced web request services, improved debugging features for geocoding requests",
   },
   {
-    redirectTo:
-      "https://dl.acm.org/doi/10.1145/3491102.3501989#sec-recommendations",
+    redirectTo: "https://dl.acm.org/doi/10.1145/3491102.3501989",
     title: "NYU Langone Mobility App",
     subtitle:
       "Developed a native iOS app in partnership with Lighthouse specialists to help clinicians analyze gait",

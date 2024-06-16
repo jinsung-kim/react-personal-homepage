@@ -29,6 +29,7 @@ export default function Home() {
           </a>
           , a Series A start up that texts users new things to do.
         </div>
+
         <div className='desc-label'>
           On the weekends, I enjoy reading and writing{" "}
           <a
@@ -38,12 +39,12 @@ export default function Home() {
           >
             (see my book blog here)
           </a>
-          , surfing/running, watching runway shows, or jamming on my bass
-          guitar.
+          , surfing/running, or jamming on my bass guitar.
         </div>
+
         <div className='desc-label'>
-          Misc. fun facts: A NYU CS (+ math minor) grad. A proud plant father.
-          Originally from Seoul, KR. Currently based in SF.
+          An NYU CS grad. Math enthusiast. A proud plant father. Originally from
+          Seoul, currently based in SF.
         </div>
 
         <div className='footer-links'>
@@ -68,7 +69,7 @@ export default function Home() {
       <style jsx>
         {`
           .desc-label {
-            font-size: 16px;
+            font-size: 14px;
             font-family: "Roboto", sans-serif;
             color: #000;
             margin-bottom: 12px;
@@ -76,7 +77,7 @@ export default function Home() {
 
           .desc-label a,
           .footer-links a {
-            font-size: 16px;
+            font-size: 14px;
             font-family: "Roboto", sans-serif;
             color: #000;
           }
