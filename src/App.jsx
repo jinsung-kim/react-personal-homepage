@@ -16,7 +16,7 @@ const RedirectUrl = ({ url }) => {
 
 export default function App() {
   return (
-    <div className='app-container'>
+    <>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -38,6 +38,6 @@ export default function App() {
           />
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 }

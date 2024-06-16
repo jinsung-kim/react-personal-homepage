@@ -1,6 +1,7 @@
 import React from "react";
 
 import Navbar from "../components/Navbar";
+import Container from "../components/Container";
 
 const EXTERNAL_LINKS = [
   { redirectTo: "https://www.github.com/jinsung-kim", label: "Github" },
@@ -15,25 +16,32 @@ const EXTERNAL_LINKS = [
 ];
 
 export default function Home() {
+  // TODO: Add analytic for page visits. PostHog?
   return (
-    <div className='home-container'>
+    <Container>
       <Navbar currentIndex={0} />
 
       <div className='main-content'>
         <div className='desc-label'>
-          During the week, you can find me programming at{" "}
+          During the week, you can find me writing code at{" "}
           <a href='https://www.nudgetext.com' target='_blank' rel='noreferrer'>
             The Nudge
           </a>
-          , a Series A start up.
+          , a Series A start up that texts users things to do.
         </div>
         <div className='desc-label'>
-          On the weekends, I enjoy reading and writing about what I read (blog
-          here), surfing/exercising, and playing bass guitar.
+          On the weekends, I enjoy reading and writing{" "}
+          <a
+            href='https://jinsung-kim.github.io'
+            target='_blank'
+            rel='noreferrer'
+          >
+            (see my blog here)
+          </a>
+          , surfing/exercising, and playing bass guitar.
         </div>
         <div className='desc-label'>
-          misc. I am based in San Francisco. I am a NYU CS grad. A proud plant
-          father.
+          A NYU CS grad. A proud plant father. Currently based in SF.
         </div>
 
         <div className='footer-links'>
@@ -57,40 +65,31 @@ export default function Home() {
       </div>
       <style jsx>
         {`
-          .home-container {
-            max-width: 500px;
-            margin-left: 10%;
-            margin-top: 10%;
-          }
-
-          .main-content {
-            margin-top: 10px;
-          }
-
           .desc-label {
             font-size: 16px;
-            font-family: sans-serif;
-            margin-bottom: 8px;
+            font-family: "Roboto", sans-serif;
+            color: #000;
+            margin-bottom: 12px;
           }
 
           .desc-label a,
           .footer-links a {
             font-size: 16px;
-            color: red;
+            font-family: "Roboto", sans-serif;
+            color: #000;
           }
 
           .desc-label a:hover,
           .footer-links a:hover {
-            color: green;
+            color: #6d712e;
           }
 
           .footer-links {
             display: flex;
             flex-direction: row;
+            flex: 1;
             margin-top: 8px;
-          }
-
-          .footer-links a {
+            flex-wrap: wrap;
           }
 
           .dot-separator {
@@ -99,6 +98,6 @@ export default function Home() {
           }
         `}
       </style>
-    </div>
+    </Container>
   );
 }

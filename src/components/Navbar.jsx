@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 const TABS = [
   {
     redirectTo: "../",
-    label: "JIN KIM",
+    label: "Jin Kim",
   },
   {
     redirectTo: "../work",
-    label: "WORK",
+    label: "Work",
   },
   {
     redirectTo: "../projects",
-    label: "PROJECTS",
+    label: "Projects",
   },
 ];
 
@@ -33,16 +33,19 @@ export default function Navbar({ currentIndex }) {
           display: flex;
           flex-direction: row;
           flex: 1;
-          gap: 8px;
+          gap: 16px;
+          margin-bottom: 16px;
         }
 
         .nav-item a {
+          font-family: "Roboto", sans-serif;
           font-size: 16px;
           text-decoration: none;
-          color: #c7c7c7;
+          color: #6d712e;
         }
 
         .nav-item-bold a {
+          font-family: "Roboto", sans-serif;
           font-size: 16px;
           text-decoration: none;
           color: #000;
