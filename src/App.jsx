@@ -1,32 +1,28 @@
 import { React, useEffect } from "react";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./styles/App.css";
 
-// Importing Pages
 import Home from "./pages/Home";
-import About from "./pages/About";
 import Work from "./pages/Work";
 import Projects from "./pages/Projects";
-// import Photos from "./pages/Photos";
 
 const RedirectUrl = ({ url }) => {
   useEffect(() => {
     window.location.href = url;
   }, [url]);
 
-  return <h5>Redirecting...</h5>;
+  return <h5>Redirecting :)</h5>;
 };
 
 export default function App() {
   return (
-    <div className='app-container'>
+    <>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
           <Route path='/work' element={<Work />} />
           <Route path='/projects' element={<Projects />} />
+
           {/* Just redirects to my other websites. */}
           <Route
             path='/blog'
@@ -42,6 +38,6 @@ export default function App() {
           />
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 }

@@ -1,59 +1,69 @@
 import React from "react";
-import { useWindowDimensions } from "../helpers/ScreenSize";
 
 import Navbar from "../components/Navbar";
-import "../styles/Projects.css";
+import Container from "../components/Container";
+import DataTable from "../components/DataTable";
+
+const PROJECTS = [
+  {
+    redirectTo: undefined,
+    title: "alternatives",
+    subtitle:
+      "Developed a full-stack application that aggregates clothes from various boutiques/middlemen into a search engine",
+  },
+  {
+    redirectTo: "https://archived-js.web.app/",
+    title: "archived.js",
+    subtitle:
+      "Created a JavaScript server and blog page to showcase my writing and photography",
+  },
+  {
+    redirectTo: "https://github.com/jinsung-kim/chess-engine",
+    title: "Trompowsky Engine",
+    subtitle:
+      "Built a Python chess engine utilizing various game theory strategies, including alpha-beta pruning, minimax, and opening lines",
+  },
+  {
+    redirectTo: undefined,
+    title: "Virtual Closet",
+    subtitle:
+      "Designed and implemented a SwiftUI app for organizing my closet, with an algorithm to generate outfits based on color palette, weather, and silhouette",
+  },
+  {
+    redirectTo: "https://github.com/jinsung-kim/dinner-res",
+    title: "Resy Bot",
+    subtitle:
+      "Developed a reservation bot that secures available time slots for up to 6 people at popular restaurants on the platform",
+  },
+];
 
 export default function Projects() {
-  const { width } = useWindowDimensions();
-
   return (
-    <div className={`projects-container${width < 500 ? "-small" : ""}`}>
-      <Navbar />
-      <div className={`main-content${width < 500 ? "-small" : ""}`}>
-        <h3>Projects</h3>
-        <p>I work on things that interest me.</p>
-        <ul>
-          <li>
-            <a href='https://romr.app/' target='_blank' rel='noreferrer'>
-              ROMR
-            </a>{" "}
-            - a social map application for finding experiences from friends.
-          </li>
-          <li>
-            <a
-              href='https://github.com/jinsung-kim/chess-engine'
-              target='_blank'
-              rel='noreferrer'
-            >
-              chess
-            </a>{" "}
-            - a chess engine in Python, with customizable play styles.
-          </li>
-          <li>
-            <a
-              href='https://github.com/jinsung-kim/stylist-enhanced'
-              target='_blank'
-              rel='noreferrer'
-            >
-              algorithmic dressing
-            </a>{" "}
-            - generating combinations of clothes based on color blocking,
-            silhouette, and weather with the aim to find new interesting looks.
-          </li>
-          <li>
-            <a
-              href='https://github.com/jinsung-kim/dinner-res'
-              target='_blank'
-              rel='noreferrer'
-            >
-              reservation bot (for resy)
-            </a>{" "}
-            - a flexible Resy bot that allows you to book reservations
-            automatically for restaurants around any city for any group.
-          </li>
-        </ul>
+    <Container>
+      <Navbar currentIndex={2} />
+
+      <div>
+        <div className='projects-label'>Projects</div>
+        <DataTable data={PROJECTS} secondaryColor='#808080' />
+        <div className='projects-disclaimer'>
+          * Links not available for closed sourced projects
+        </div>
       </div>
-    </div>
+
+      <style jsx>{`
+        .projects-label {
+          font-size: 16px;
+          font-family: "Roboto", sans-serif;
+          margin-bottom: 6px;
+        }
+
+        .projects-disclaimer {
+          font-size: 12px;
+          font-family: "Roboto", sans-serif;
+          color: #c7c7c7;
+          margin-top: 8px;
+        }
+      `}</style>
+    </Container>
   );
 }

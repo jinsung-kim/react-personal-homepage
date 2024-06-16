@@ -1,55 +1,56 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useWindowDimensions } from "../helpers/ScreenSize";
 
-import "../styles/Navbar.css";
+const TABS = [
+  {
+    redirectTo: "../",
+    label: "Jin Kim",
+  },
+  {
+    redirectTo: "../work",
+    label: "Work",
+  },
+  {
+    redirectTo: "../projects",
+    label: "Projects",
+  },
+];
 
-export default function Navbar() {
-  const { width } = useWindowDimensions();
-  const isWide = width >= 500;
+export default function Navbar({ currentIndex }) {
   return (
-    <div
-      className={`navbar-container-${isWide ? "" : "compact"}`}
-      style={{
-        paddingLeft: isWide ? width / 10 : 0,
-        paddingRight: isWide ? 10 : 0,
-        textAlign: isWide ? "right" : "left",
-      }}
-    >
-      <div className='nav-item'>
-        <Link to='../' style={{ textDecoration: "none" }}>
-          <p className='nav-item'>J.</p>
-        </Link>
-      </div>
-
-      <div className='nav-item'>
-        <Link to='../about' style={{ textDecoration: "none" }}>
-          <p className='nav-item'>ABOUT</p>
-        </Link>
-      </div>
-
-      <div className='nav-item'>
-        <Link to='../work' style={{ textDecoration: "none" }}>
-          <p className='nav-item'>WORK</p>
-        </Link>
-      </div>
-
-      <div className='nav-item'>
-        <Link to='../projects' style={{ textDecoration: "none" }}>
-          <p className='nav-item'>PROJECTS</p>
-        </Link>
-      </div>
-
-      <div className='nav-item'>
-        <a
-          target='_blank'
-          href='https://jinsung-kim.github.io/'
-          style={{ textDecoration: "none" }}
-          rel='noreferrer'
+    <div className='navbar-container'>
+      {TABS.map((tab, index) => (
+        <div
+          className={`nav-item${currentIndex === index ? "-bold" : ""}`}
+          key={`nav-${index}`}
         >
-          <p className='nav-item'>BLOG</p>
-        </a>
-      </div>
+          <Link to={tab.redirectTo}>{tab.label}</Link>
+        </div>
+      ))}
+
+      <style jsx>{`
+        .navbar-container {
+          display: flex;
+          flex-direction: row;
+          flex: 1;
+          gap: 16px;
+          margin-bottom: 16px;
+        }
+
+        .nav-item a {
+          font-family: "Roboto", sans-serif;
+          font-size: 16px;
+          text-decoration: none;
+          color: #6d712e;
+        }
+
+        .nav-item-bold a {
+          font-family: "Roboto", sans-serif;
+          font-size: 16px;
+          text-decoration: none;
+          color: #000;
+        }
+      `}</style>
     </div>
   );
 }
