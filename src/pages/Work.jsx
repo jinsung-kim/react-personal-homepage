@@ -67,7 +67,7 @@ export default function Work() {
     <Container>
       <Navbar currentIndex={1} />
 
-      <div className='main-content'>
+      <div>
         <div className='academic-label'>Academic Contributions</div>
         <DataTable data={ACADEMIC_PUBLICATIONS} secondaryColor='#808080' />
 
