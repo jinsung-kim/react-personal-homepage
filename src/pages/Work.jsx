@@ -15,7 +15,7 @@ const ACADEMIC_PUBLICATIONS = [
     redirectTo: "https://dl.acm.org/doi/10.1145/3555622",
     title: "CSCW 2022",
     subtitle:
-      "‘Are They Doing Better In The Clinic Or At Home?’: Understanding Clinicians’ Needs When Visualizing Wearable Sensor Data Used In Remote Gait Assessments For People With Multiple Sclerosis",
+      "‘Digital Technologies In Orientation And Mobility Instruction For People Who Are Blind Or Have Low Vision",
   },
 ];
 

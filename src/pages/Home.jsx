@@ -23,11 +23,11 @@ export default function Home() {
 
       <div className='main-content'>
         <div className='desc-label'>
-          During the week, you can find me writing code at{" "}
+          Throughout the week, you can find me writing code at{" "}
           <a href='https://www.nudgetext.com' target='_blank' rel='noreferrer'>
             The Nudge
           </a>
-          , a Series A start up that texts users things to do.
+          , a Series A start up that texts users new things to do.
         </div>
         <div className='desc-label'>
           On the weekends, I enjoy reading and writing{" "}
@@ -36,12 +36,14 @@ export default function Home() {
             target='_blank'
             rel='noreferrer'
           >
-            (see my blog here)
+            (see my book blog here)
           </a>
-          , surfing/exercising, and playing bass guitar.
+          , surfing/running, watching runway shows, or jamming on my bass
+          guitar.
         </div>
         <div className='desc-label'>
-          A NYU CS grad. A proud plant father. Currently based in SF.
+          Misc. fun facts: A NYU CS (+ math minor) grad. A proud plant father.
+          Originally from Seoul, KR. Currently based in SF.
         </div>
 
         <div className='footer-links'>

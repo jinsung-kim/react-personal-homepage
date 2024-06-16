@@ -18,6 +18,7 @@ export default function Container({ children }) {
             margin-top: 32px;
             margin-left: 16px;
             margin-right: 16px;
+            padding-bottom: 64px;
           }
         }
       `}</style>
