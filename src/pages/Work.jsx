@@ -18,12 +18,48 @@ const ACADEMIC_PUBLICATIONS = [
       "‘Are They Doing Better In The Clinic Or At Home?’: Understanding Clinicians’ Needs When Visualizing Wearable Sensor Data Used In Remote Gait Assessments For People With Multiple Sclerosis",
   },
 ];
+
 const WORK_EXPERIENCES = [
-  { redirectTo: "", title: "", subtitle: "" },
-  { redirectTo: "", title: "", subtitle: "" },
-  { redirectTo: "", title: "", subtitle: "" },
-  { redirectTo: "", title: "", subtitle: "" },
-  { redirectTo: "", title: "", subtitle: "" },
+  {
+    redirectTo: "https://www.nudgetext.com",
+    title: "The Nudge",
+    subtitle:
+      "Currently building out texting services, map features, and internal tools",
+  },
+  {
+    redirectTo:
+      "https://www.aboutamazon.com/news/retail/amazon-reimagines-in-store-shopping-with-amazon-style",
+    title: "Amazon",
+    subtitle:
+      "Developed a sort and filtering system to allow retail customers to seamlessly sort through categories in the Amazon Style app",
+  },
+  {
+    redirectTo: "https://maps.trimble.com/",
+    title: "Trimble Maps",
+    subtitle:
+      "Assisted clients with API usage, enhanced web request services, improved debugging features for geocoding requests",
+  },
+  {
+    redirectTo:
+      "https://dl.acm.org/doi/10.1145/3491102.3501989#sec-recommendations",
+    title: "NYU Langone Mobility App",
+    subtitle:
+      "Developed a native iOS app in partnership with Lighthouse specialists to help clinicians analyze gait",
+  },
+];
+
+const FREE_LANCING = [
+  {
+    redirectTo: "https://romr.app/",
+    title: "ROMR App",
+    subtitle: "Created a social network app for sharing food and experiences",
+  },
+  {
+    redirectTo: "https://coffeecard.nyc/",
+    title: "Coffee Card",
+    subtitle:
+      "Redesigned app with a light mode UI, architected a discount system, managed orders in vendor app",
+  },
 ];
 
 export default function Work() {
@@ -32,11 +68,14 @@ export default function Work() {
       <Navbar currentIndex={1} />
 
       <div className='main-content'>
-        <div className='academic-label'>Academic Publications</div>
-        <DataTable data={ACADEMIC_PUBLICATIONS} />
+        <div className='academic-label'>Academic Contributions</div>
+        <DataTable data={ACADEMIC_PUBLICATIONS} secondaryColor='#808080' />
 
         <div className='work-label'>Work Experience</div>
-        <DataTable data={WORK_EXPERIENCES} />
+        <DataTable data={WORK_EXPERIENCES} secondaryColor='#808080' />
+
+        <div className='work-label'>Free Lancing</div>
+        <DataTable data={FREE_LANCING} secondaryColor='#808080' />
       </div>
 
       <style jsx>{`
@@ -48,7 +87,7 @@ export default function Work() {
         }
 
         .work-label {
-          margin-top: 12px;
+          margin-top: 16px;
         }
       `}</style>
     </Container>
