@@ -2,7 +2,6 @@ import React from "react";
 import { useWindowDimensions } from "../helpers/ScreenSize";
 
 import Navbar from "../components/Navbar";
-import "../styles/Projects.css";
 
 export default function Projects() {
   const { width } = useWindowDimensions();
