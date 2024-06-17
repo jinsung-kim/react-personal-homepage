@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Navbar from "../components/Navbar";
 import Container from "../components/Container";
 import DataTable from "../components/DataTable";
+import posthog from "posthog-js";
 
 const ACADEMIC_PUBLICATIONS = [
   {
@@ -62,6 +63,10 @@ const FREE_LANCING = [
 ];
 
 export default function Work() {
+  useEffect(() => {
+    posthog.capture("WorkPageView");
+  }, []);
+
   return (
     <Container>
       <Navbar currentIndex={1} />
@@ -77,7 +82,7 @@ export default function Work() {
         <DataTable data={FREE_LANCING} secondaryColor='#808080' />
       </div>
 
-      <style jsx>{`
+      <style jsx='true'>{`
         .academic-label,
         .work-label {
           font-size: 16px;

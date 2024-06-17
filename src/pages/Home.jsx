@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 
 import Navbar from "../components/Navbar";
 import Container from "../components/Container";
+import posthog from "posthog-js";
 
 const EXTERNAL_LINKS = [
   { redirectTo: "https://www.github.com/jinsung-kim", label: "Github" },
@@ -16,7 +17,14 @@ const EXTERNAL_LINKS = [
 ];
 
 export default function Home() {
-  // TODO: Add analytic for page visits. PostHog?
+  useEffect(() => {
+    posthog.capture("HomePageView");
+  }, []);
+
+  const handleExternalLinkClick = useCallback((link) => {
+    posthog.capture("HomeExternalLinkClick", { link });
+  }, []);
+
   return (
     <Container>
       <Navbar currentIndex={0} />
@@ -27,15 +35,18 @@ export default function Home() {
           <a href='https://www.nudgetext.com' target='_blank' rel='noreferrer'>
             The Nudge
           </a>
-          , a Series A start up that texts users new things to do.
+          , a Series A start up that text users cool things to do.
         </div>
 
         <div className='desc-label'>
-          On the weekends, I enjoy reading and writing{" "}
+          On the weekends, I can be found reading and writing{" "}
           <a
             href='https://jinsung-kim.github.io'
             target='_blank'
             rel='noreferrer'
+            onClick={() =>
+              handleExternalLinkClick("https://jinsung-kim.github.io")
+            }
           >
             (see my book blog here)
           </a>
@@ -49,12 +60,16 @@ export default function Home() {
 
         <div className='footer-links'>
           {EXTERNAL_LINKS.map((link, index) => (
-            <>
+            <div
+              className='footer-link-container'
+              key={`external-link-${index}`}
+            >
               <a
                 href={link.redirectTo}
                 target='_blank'
                 className='footer-link'
                 rel='noreferrer'
+                onClick={() => handleExternalLinkClick(link.redirectTo)}
               >
                 {link.label}
               </a>
@@ -62,11 +77,11 @@ export default function Home() {
               {index !== EXTERNAL_LINKS.length - 1 && (
                 <div className='dot-separator'>·</div>
               )}
-            </>
+            </div>
           ))}
         </div>
       </div>
-      <style jsx>
+      <style jsx='true'>
         {`
           .desc-label {
             font-size: 14px;
@@ -93,6 +108,11 @@ export default function Home() {
             flex: 1;
             margin-top: 8px;
             flex-wrap: wrap;
+          }
+
+          .footer-link-container {
+            display: flex;
+            flex-direction: row;
           }
 
           .dot-separator {

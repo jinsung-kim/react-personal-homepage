@@ -28,7 +28,7 @@ export default function Navbar({ currentIndex }) {
         </div>
       ))}
 
-      <style jsx>{`
+      <style jsx='true'>{`
         .navbar-container {
           display: flex;
           flex-direction: row;

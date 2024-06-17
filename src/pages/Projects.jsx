@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Navbar from "../components/Navbar";
 import Container from "../components/Container";
 import DataTable from "../components/DataTable";
+import posthog from "posthog-js";
 
 const PROJECTS = [
   {
@@ -38,6 +39,10 @@ const PROJECTS = [
 ];
 
 export default function Projects() {
+  useEffect(() => {
+    posthog.capture("ProjectsPageView");
+  }, []);
+
   return (
     <Container>
       <Navbar currentIndex={2} />
@@ -50,7 +55,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <style jsx>{`
+      <style jsx='true'>{`
         .projects-label {
           font-size: 16px;
           font-family: "Roboto", sans-serif;

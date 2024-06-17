@@ -4,7 +4,7 @@ export default function Container({ children }) {
   return (
     <div className='container'>
       {children}
-      <style jsx>{`
+      <style jsx='true'>{`
         @media (min-width: 540px) {
           .container {
             max-width: 500px;

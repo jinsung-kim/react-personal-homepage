@@ -5,6 +5,20 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Work from "./pages/Work";
 import Projects from "./pages/Projects";
+import posthog from "posthog-js";
+
+if (typeof window !== "undefined") {
+  posthog.init("phc_sCvHzrDj0HZWNdUT1LHFj44kF16g0loQPJzbRxROE1h", {
+    api_host: "https://us.i.posthog.com",
+    person_profiles: "always",
+    // Enable debug mode in development.
+    loaded: (posthog) => {
+      if (process.env.NODE_ENV === "development") {
+        posthog.debug();
+      }
+    },
+  });
+}
 
 const RedirectUrl = ({ url }) => {
   useEffect(() => {

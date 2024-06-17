@@ -1,6 +1,11 @@
-import React from "react";
+import posthog from "posthog-js";
+import React, { useCallback } from "react";
 
 export default function DataTable({ data, primaryColor, secondaryColor }) {
+  const handleTableCellClick = useCallback((link) => {
+    posthog.capture("TableCellClick", { link });
+  }, []);
+
   return (
     <div className='table-container'>
       {data.map((item, index) => (
@@ -10,6 +15,11 @@ export default function DataTable({ data, primaryColor, secondaryColor }) {
           href={item.redirectTo}
           target='_blank'
           rel='noreferrer'
+          onClick={
+            item.redirectTo
+              ? () => handleTableCellClick(item.redirectTo)
+              : undefined
+          }
         >
           <div className={`item-title${item.redirectTo ? "-clickable" : ""}`}>
             {item.title}{" "}
@@ -21,9 +31,9 @@ export default function DataTable({ data, primaryColor, secondaryColor }) {
                 viewBox='0 0 24 24'
                 fill='none'
                 stroke='currentColor'
-                stroke-width='2'
-                stroke-linecap='round'
-                stroke-linejoin='round'
+                strokeWidth='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
                 className='external-link-icon'
               >
                 <line x1='7' y1='17' x2='17' y2='7'></line>
@@ -38,7 +48,7 @@ export default function DataTable({ data, primaryColor, secondaryColor }) {
           </div>
         </a>
       ))}
-      <style jsx>{`
+      <style jsx='true'>{`
         .table-container {
           display: flex;
           flex-direction: column;
