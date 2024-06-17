@@ -48,7 +48,7 @@ const WORK_EXPERIENCES = [
   },
 ];
 
-const FREE_LANCING = [
+const FREELANCING = [
   {
     redirectTo: "https://romr.app/",
     title: "ROMR App",
@@ -78,8 +78,8 @@ export default function Work() {
         <div className='work-label'>Work Experience</div>
         <DataTable data={WORK_EXPERIENCES} secondaryColor='#808080' />
 
-        <div className='work-label'>Free Lancing</div>
-        <DataTable data={FREE_LANCING} secondaryColor='#808080' />
+        <div className='work-label'>Freelancing</div>
+        <DataTable data={FREELANCING} secondaryColor='#808080' />
       </div>
 
       <style jsx='true'>{`
