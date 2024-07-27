@@ -25,7 +25,14 @@ const RedirectUrl = ({ url }) => {
     window.location.href = url;
   }, [url]);
 
-  return <h5>Redirecting :)</h5>;
+  return <><h5>Redirecting...</h5>
+    <style jsx>{`
+    h5 {
+      font-size: 14px;
+      font-family: "Roboto", sans-serif;
+    }
+    `}</style>
+  </>;
 };
 
 export default function App() {

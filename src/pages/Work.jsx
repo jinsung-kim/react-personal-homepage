@@ -80,6 +80,8 @@ export default function Work() {
 
         <div className='work-label'>Freelancing</div>
         <DataTable data={FREELANCING} secondaryColor='#808080' />
+
+        <div className="footer">* References available upon request</div>
       </div>
 
       <style jsx='true'>{`
@@ -92,6 +94,13 @@ export default function Work() {
 
         .work-label {
           margin-top: 16px;
+        }
+        
+        .footer {
+          font-size: 12px;
+          font-family: "Roboto", sans-serif;
+          color: #c7c7c7;
+          margin-top: 8px;
         }
       `}</style>
     </Container>

@@ -54,7 +54,7 @@ export default function Home() {
         </div>
 
         <div className='desc-label'>
-          An NYU CS grad. Math enthusiast. A proud plant father. Originally from
+          An NYU CS grad. Math enthusiast. Archive fashion collector. Originally from
           Seoul, currently based in SF.
         </div>
 
@@ -81,7 +81,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <style jsx='true'>
+      <style jsx>
         {`
           .desc-label {
             font-size: 14px;

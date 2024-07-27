@@ -7,6 +7,12 @@ import posthog from "posthog-js";
 
 const PROJECTS = [
   {
+    redirectTo: "https://github.com/jinsung-kim/trompowsky-engine",
+    title: "Trompowsky Engine",
+    subtitle:
+        "Built a Python chess engine utilizing various game theory strategies, including alpha-beta pruning, minimax, and opening lines",
+  },
+  {
     redirectTo: undefined,
     title: "alternatives",
     subtitle:
@@ -19,19 +25,13 @@ const PROJECTS = [
       "Created a JavaScript server and blog page to showcase my writing and photography",
   },
   {
-    redirectTo: "https://github.com/jinsung-kim/chess-engine",
-    title: "Trompowsky Engine",
-    subtitle:
-      "Built a Python chess engine utilizing various game theory strategies, including alpha-beta pruning, minimax, and opening lines",
-  },
-  {
     redirectTo: undefined,
     title: "Virtual Closet",
     subtitle:
       "Designed and implemented a SwiftUI app for organizing my closet, with an algorithm to generate outfits based on color palette, weather, and silhouette",
   },
   {
-    redirectTo: "https://github.com/jinsung-kim/dinner-res",
+    redirectTo: undefined,
     title: "Resy Bot",
     subtitle:
       "Developed a reservation bot that secures available time slots for up to 6 people at popular restaurants on the platform",
