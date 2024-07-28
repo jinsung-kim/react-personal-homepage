@@ -3,7 +3,6 @@ import boto3
 import mimetypes
 from botocore.exceptions import NoCredentialsError, ClientError
 
-# Define the bucket name.
 BUCKET_NAME = 'jinkim-react-site'
 
 # Path to the build directory.
