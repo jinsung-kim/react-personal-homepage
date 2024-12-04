@@ -1,51 +1,58 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from 'react';
 
-import Navbar from "../components/Navbar";
-import Container from "../components/Container";
-import posthog from "posthog-js";
+import Navbar from '../components/Navbar';
+import Container from '../components/Container';
+import posthog from 'posthog-js';
 
 const EXTERNAL_LINKS = [
-  { redirectTo: "https://www.github.com/jinsung-kim", label: "Github" },
+  { redirectTo: 'https://www.github.com/jinsung-kim', label: 'Github' },
   {
     redirectTo:
-      "https://us-central1-jinkim-backend.cloudfunctions.net/app/resume",
-    label: "Resume",
+      'https://us-central1-jinkim-backend.cloudfunctions.net/app/resume',
+    label: 'Resume',
   },
-  { redirectTo: "https://jinsung-kim.github.io", label: "Writing" },
-  { redirectTo: "https://www.linkedin.com/in/jin-k", label: "LinkedIn" },
-  { redirectTo: "https://vsco.co/code-jin/gallery", label: "VSCO" },
+  { redirectTo: 'https://jinsung-kim.github.io', label: 'Writing' },
+  { redirectTo: 'https://www.linkedin.com/in/jin-k', label: 'LinkedIn' },
+  { redirectTo: 'https://vsco.co/code-jin/gallery', label: 'VSCO' },
 ];
 
 export default function Home() {
+  const [imageVisible, setImageVisible] = useState(false);
+
   useEffect(() => {
-    posthog.capture("HomePageView");
+    posthog.capture('HomePageView');
   }, []);
 
-  const handleExternalLinkClick = useCallback((link) => {
-    posthog.capture("HomeExternalLinkClick", { link });
+  const handleExternalLinkClick = useCallback(link => {
+    posthog.capture('HomeExternalLinkClick', { link });
   }, []);
+
+  const handleImagePress = () => {
+    setImageVisible(s => !s);
+    posthog.capture('HomeImageClick', { imageVisible });
+  };
 
   return (
     <Container>
       <Navbar currentIndex={0} />
 
-      <div className='main-content'>
-        <div className='desc-label'>
-          Throughout the week, you can find me writing code at{" "}
-          <a href='https://www.nudgetext.com' target='_blank' rel='noreferrer'>
+      <div className="main-content">
+        <div className="desc-label">
+          Throughout the week, you can find me writing code at{' '}
+          <a href="https://www.nudgetext.com" target="_blank" rel="noreferrer">
             The Nudge
           </a>
           , a Series A start up that text users cool things to do.
         </div>
 
-        <div className='desc-label'>
-          On the weekends, I can be found reading and writing{" "}
+        <div className="desc-label">
+          On the weekends, I can be found reading and writing{' '}
           <a
-            href='https://jinsung-kim.github.io'
-            target='_blank'
-            rel='noreferrer'
+            href="https://jinsung-kim.github.io"
+            target="_blank"
+            rel="noreferrer"
             onClick={() =>
-              handleExternalLinkClick("https://jinsung-kim.github.io")
+              handleExternalLinkClick('https://jinsung-kim.github.io')
             }
           >
             (see my book blog here)
@@ -53,29 +60,44 @@ export default function Home() {
           , surfing/running, or jamming on my bass guitar.
         </div>
 
-        <div className='desc-label'>
-          An NYU CS grad. Math enthusiast. Archive fashion collector. Originally from
+        <div className="desc-label">
+          An NYU CS grad. Fashion archivist. Music enthusiast. Originally from
           Seoul, currently based in SF.
         </div>
 
-        <div className='footer-links'>
+        {imageVisible ? (
+          <div className="image-container" onClick={handleImagePress}>
+            <div className="image-button">Click here to go back.</div>
+
+            <img
+              src="https://d2fqe3vzpyzs1r.cloudfront.net/original/hrQc2OvZmHBXVGfT-upload.jpg"
+              alt="me"
+            />
+          </div>
+        ) : (
+          <div className="image-button" onClick={handleImagePress}>
+            Click here to see a photo.
+          </div>
+        )}
+
+        <div className="footer-links">
           {EXTERNAL_LINKS.map((link, index) => (
             <div
-              className='footer-link-container'
+              className="footer-link-container"
               key={`external-link-${index}`}
             >
               <a
                 href={link.redirectTo}
-                target='_blank'
-                className='footer-link'
-                rel='noreferrer'
+                target="_blank"
+                className="footer-link"
+                rel="noreferrer"
                 onClick={() => handleExternalLinkClick(link.redirectTo)}
               >
                 {link.label}
               </a>
 
               {index !== EXTERNAL_LINKS.length - 1 && (
-                <div className='dot-separator'>·</div>
+                <div className="dot-separator">·</div>
               )}
             </div>
           ))}
@@ -85,7 +107,7 @@ export default function Home() {
         {`
           .desc-label {
             font-size: 14px;
-            font-family: "Roboto", sans-serif;
+            font-family: 'Roboto', sans-serif;
             color: #000;
             margin-bottom: 12px;
           }
@@ -93,13 +115,25 @@ export default function Home() {
           .desc-label a,
           .footer-links a {
             font-size: 14px;
-            font-family: "Roboto", sans-serif;
+            font-family: 'Roboto', sans-serif;
             color: #000;
           }
 
           .desc-label a:hover,
           .footer-links a:hover {
             color: #6d712e;
+          }
+
+          .image-button {
+            cursor: pointer;
+            font-size: 14px;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 12px;
+            text-decoration: underline;
+          }
+
+          .image-container img {
+            max-height: 300px;
           }
 
           .footer-links {

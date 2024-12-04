@@ -12,7 +12,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ## Deploying
 
-1. After building the project, run `aws configure` with the correct access key and secret. 
+1. After building the project, run `aws configure` with the correct access key and secret.
 2. Point the BUCKET_NAME variable to the desired bucket.
 3. Run `python3 deploy.py`. Make sure to have `boto3` installed locally.
 4. Invalidate Cloudfront instances.

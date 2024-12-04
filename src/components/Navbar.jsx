@@ -1,34 +1,34 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TABS = [
   {
-    redirectTo: "../",
-    label: "Jin Kim",
+    redirectTo: '../',
+    label: 'Jin Kim',
   },
   {
-    redirectTo: "../work",
-    label: "Work",
+    redirectTo: '../work',
+    label: 'Work',
   },
   {
-    redirectTo: "../projects",
-    label: "Projects",
+    redirectTo: '../projects',
+    label: 'Projects',
   },
 ];
 
 export default function Navbar({ currentIndex }) {
   return (
-    <div className='navbar-container'>
+    <div className="navbar-container">
       {TABS.map((tab, index) => (
         <div
-          className={`nav-item${currentIndex === index ? "-bold" : ""}`}
+          className={`nav-item${currentIndex === index ? '-bold' : ''}`}
           key={`nav-${index}`}
         >
           <Link to={tab.redirectTo}>{tab.label}</Link>
         </div>
       ))}
 
-      <style jsx='true'>{`
+      <style jsx="true">{`
         .navbar-container {
           display: flex;
           flex-direction: row;
@@ -38,14 +38,14 @@ export default function Navbar({ currentIndex }) {
         }
 
         .nav-item a {
-          font-family: "Roboto", sans-serif;
+          font-family: 'Roboto', sans-serif;
           font-size: 16px;
           text-decoration: none;
           color: #6d712e;
         }
 
         .nav-item-bold a {
-          font-family: "Roboto", sans-serif;
+          font-family: 'Roboto', sans-serif;
           font-size: 16px;
           text-decoration: none;
           color: #000;

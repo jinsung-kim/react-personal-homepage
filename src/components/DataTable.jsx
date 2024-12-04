@@ -1,54 +1,54 @@
-import posthog from "posthog-js";
-import React, { useCallback } from "react";
+import posthog from 'posthog-js';
+import React, { useCallback } from 'react';
 
 export default function DataTable({ data, primaryColor, secondaryColor }) {
-  const handleTableCellClick = useCallback((link) => {
-    posthog.capture("TableCellClick", { link });
+  const handleTableCellClick = useCallback(link => {
+    posthog.capture('TableCellClick', { link });
   }, []);
 
   return (
-    <div className='table-container'>
+    <div className="table-container">
       {data.map((item, index) => (
         <a
-          className='table-item'
+          className="table-item"
           key={`table-item-${item.title}-${index}`}
           href={item.redirectTo}
-          target='_blank'
-          rel='noreferrer'
+          target="_blank"
+          rel="noreferrer"
           onClick={
             item.redirectTo
               ? () => handleTableCellClick(item.redirectTo)
               : undefined
           }
         >
-          <div className={`item-title${item.redirectTo ? "-clickable" : ""}`}>
-            {item.title}{" "}
+          <div className={`item-title${item.redirectTo ? '-clickable' : ''}`}>
+            {item.title}{' '}
             {item.redirectTo && (
               <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='16'
-                height='16'
-                viewBox='0 0 24 24'
-                fill='none'
-                stroke='currentColor'
-                strokeWidth='2'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                className='external-link-icon'
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="external-link-icon"
               >
-                <line x1='7' y1='17' x2='17' y2='7'></line>
-                <polyline points='7 7 17 7 17 17'></polyline>
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
               </svg>
             )}
           </div>
           <div
-            className={`item-subtitle${item.redirectTo ? "-clickable" : ""}`}
+            className={`item-subtitle${item.redirectTo ? '-clickable' : ''}`}
           >
             {item.subtitle}
           </div>
         </a>
       ))}
-      <style jsx='true'>{`
+      <style jsx="true">{`
         .table-container {
           display: flex;
           flex-direction: column;
@@ -58,8 +58,8 @@ export default function DataTable({ data, primaryColor, secondaryColor }) {
         .item-title,
         .item-title-clickable {
           font-size: 14px;
-          font-family: "Roboto", sans-serif;
-          color: ${primaryColor ?? "#000"};
+          font-family: 'Roboto', sans-serif;
+          color: ${primaryColor ?? '#000'};
           display: flex;
           flex-direction: row;
           flex: 1;
@@ -74,8 +74,8 @@ export default function DataTable({ data, primaryColor, secondaryColor }) {
         .item-subtitle,
         .item-subtitle-clickable {
           font-size: 14px;
-          font-family: "Roboto", sans-serif;
-          color: ${secondaryColor ?? "#c7c7c7"};
+          font-family: 'Roboto', sans-serif;
+          color: ${secondaryColor ?? '#c7c7c7'};
           margin-top: 4px;
         }
 

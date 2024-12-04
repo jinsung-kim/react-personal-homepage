@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 export default function Container({ children }) {
   return (
-    <div className='container'>
+    <div className="container">
       {children}
-      <style jsx='true'>{`
+      <style jsx="true">{`
         @media (min-width: 540px) {
           .container {
             max-width: 500px;
