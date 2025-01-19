@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect } from 'react';
 
 import Navbar from '../components/Navbar';
 import Container from '../components/Container';
@@ -17,8 +17,6 @@ const EXTERNAL_LINKS = [
 ];
 
 export default function Home() {
-  const [imageVisible, setImageVisible] = useState(false);
-
   useEffect(() => {
     posthog.capture('HomePageView');
   }, []);
@@ -26,11 +24,6 @@ export default function Home() {
   const handleExternalLinkClick = useCallback(link => {
     posthog.capture('HomeExternalLinkClick', { link });
   }, []);
-
-  const handleImagePress = () => {
-    setImageVisible(s => !s);
-    posthog.capture('HomeImageClick', { imageVisible });
-  };
 
   return (
     <Container>
