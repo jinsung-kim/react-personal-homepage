@@ -65,21 +65,6 @@ export default function Home() {
           Seoul, currently based in SF.
         </div>
 
-        {imageVisible ? (
-          <div className="image-container" onClick={handleImagePress}>
-            <div className="image-button">Click here to go back.</div>
-
-            <img
-              src="https://d2fqe3vzpyzs1r.cloudfront.net/original/hrQc2OvZmHBXVGfT-upload.jpg"
-              alt="me"
-            />
-          </div>
-        ) : (
-          <div className="image-button" onClick={handleImagePress}>
-            Click here to see a photo.
-          </div>
-        )}
-
         <div className="footer-links">
           {EXTERNAL_LINKS.map((link, index) => (
             <div
