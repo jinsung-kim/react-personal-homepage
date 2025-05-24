@@ -50,7 +50,7 @@ export default function App() {
           {/* Just redirects to my other websites. */}
           <Route
             path="/blog"
-            element={<RedirectUrl url="https://jinsung-kim.github.io/" />}
+            element={<RedirectUrl url="https://www.thereadingcorner.net" />}
           />
           <Route
             path="/archive"

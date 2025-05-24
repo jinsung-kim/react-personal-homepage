@@ -11,7 +11,7 @@ const EXTERNAL_LINKS = [
       'https://us-central1-jinkim-backend.cloudfunctions.net/app/resume',
     label: 'Resume',
   },
-  { redirectTo: 'https://jinsung-kim.github.io', label: 'Writing' },
+  { redirectTo: 'https://www.thereadingcorner.net', label: 'Writing' },
   { redirectTo: 'https://www.linkedin.com/in/jin-k', label: 'LinkedIn' },
   { redirectTo: 'https://vsco.co/code-jin/gallery', label: 'VSCO' },
 ];
@@ -41,11 +41,11 @@ export default function Home() {
         <div className="desc-label">
           On the weekends, I can be found reading and writing{' '}
           <a
-            href="https://jinsung-kim.github.io"
+            href="https://www.thereadingcorner.net"
             target="_blank"
             rel="noreferrer"
             onClick={() =>
-              handleExternalLinkClick('https://jinsung-kim.github.io')
+              handleExternalLinkClick('https://www.thereadingcorner.net')
             }
           >
             (see my book blog here)
