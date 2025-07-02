@@ -22,10 +22,15 @@ const ACADEMIC_PUBLICATIONS = [
 
 const WORK_EXPERIENCES = [
   {
+    redirectTo: 'https://tech.facebook.com/reality-labs/',
+    title: 'Meta',
+    subtitle: 'Currently working on cutting edge technology in Reality Labs'
+  },
+  {
     redirectTo: 'https://www.nudgetext.com',
     title: 'The Nudge',
     subtitle:
-      'Currently building out texting services, map features, and internal tools',
+      'Built out texting services, map features, and internal tools',
   },
   {
     redirectTo:

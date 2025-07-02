@@ -33,9 +33,9 @@ export default function Home() {
         <div className="desc-label">
           Throughout the week, you can find me writing code at{' '}
           <a href="https://www.nudgetext.com" target="_blank" rel="noreferrer">
-            The Nudge
+            Meta
           </a>
-          , a Series A start up that text users cool things to do.
+          {" "}in the Reality Labs org.
         </div>
 
         <div className="desc-label">
