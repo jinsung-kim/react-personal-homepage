@@ -32,7 +32,7 @@ export default function Home() {
       <div className="main-content">
         <div className="desc-label">
           Throughout the week, you can find me writing code at{' '}
-          <a href="https://www.nudgetext.com" target="_blank" rel="noreferrer">
+          <a href="https://tech.facebook.com/reality-labs/" target="_blank" rel="noreferrer">
             Meta
           </a>
           {" "}in the Reality Labs org.
