@@ -19,18 +19,6 @@ const PROJECTS = [
       'Developed a full-stack application that aggregates clothes from various boutiques/middlemen into a search engine',
   },
   {
-    redirectTo: 'https://archived-js.web.app/',
-    title: 'archived.js',
-    subtitle:
-      'Created a JavaScript server and blog page to showcase my writing and photography',
-  },
-  {
-    redirectTo: undefined,
-    title: 'Virtual Closet',
-    subtitle:
-      'Designed and implemented a SwiftUI app for organizing my closet, with an algorithm to generate outfits based on color palette, weather, and silhouette',
-  },
-  {
     redirectTo: undefined,
     title: 'Resy Bot',
     subtitle:
