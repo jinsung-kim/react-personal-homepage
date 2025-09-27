@@ -24,25 +24,20 @@ export default function DataTable({ data, primaryColor, secondaryColor }) {
           <div className={`item-title${item.redirectTo ? '-clickable' : ''}`}>
             {item.title}{' '}
             {item.redirectTo && (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="external-link-icon"
-              >
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
-              </svg>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     fill="none"
+                     width="14"
+                     height="14"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor"
+                     strokeWidth="2"
+                     className="external-link-icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"/>
+                </svg>
             )}
           </div>
           <div
-            className={`item-subtitle${item.redirectTo ? '-clickable' : ''}`}
+              className={`item-subtitle${item.redirectTo ? '-clickable' : ''}`}
           >
             {item.subtitle}
           </div>

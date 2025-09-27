@@ -22,7 +22,7 @@ const ACADEMIC_PUBLICATIONS = [
 
 const WORK_EXPERIENCES = [
   {
-    redirectTo: 'https://tech.facebook.com/reality-labs/',
+    redirectTo: 'https://www.nytimes.com/2025/07/23/science/meta-computer-wristband-reardon.html?unlocked_article_code=1.ik8.e6Il.Vl1FxXROyFJR&smid=url-share',
     title: 'Meta',
     subtitle: 'Currently working on cutting edge technology in Reality Labs'
   },

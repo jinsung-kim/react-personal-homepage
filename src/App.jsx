@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Work from './pages/Work';
-import Projects from './pages/Projects';
 import posthog from 'posthog-js';
 
 if (typeof window !== 'undefined') {
@@ -45,7 +44,6 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/work" element={<Work />} />
-          <Route path="/projects" element={<Projects />} />
 
           {/* Just redirects to my other websites. */}
           <Route

@@ -13,7 +13,6 @@ const EXTERNAL_LINKS = [
   },
   { redirectTo: 'https://www.thereadingcorner.net', label: 'Writing' },
   { redirectTo: 'https://www.linkedin.com/in/jin-k', label: 'LinkedIn' },
-  { redirectTo: 'https://vsco.co/code-jin/gallery', label: 'VSCO' },
 ];
 
 export default function Home() {
@@ -39,7 +38,7 @@ export default function Home() {
         </div>
 
         <div className="desc-label">
-          On the weekends, I can be found reading and writing{' '}
+          On the weekends, I alternate between reading{' '}
           <a
             href="https://www.thereadingcorner.net"
             target="_blank"
@@ -50,12 +49,12 @@ export default function Home() {
           >
             (see my book blog here)
           </a>
-          , surfing/running, or jamming on my bass guitar.
+          , catching waves, bouldering, and jamming on my bass guitar.
         </div>
 
         <div className="desc-label">
-          An NYU CS grad. Fashion archivist. Music enthusiast. Originally from
-          Seoul, currently based in SF.
+          An NYU CS grad. Originally from
+          Seoul, currently based in NYC.
         </div>
 
         <div className="footer-links">
