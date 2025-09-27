@@ -4,6 +4,7 @@ import mimetypes
 from botocore.exceptions import NoCredentialsError, ClientError
 
 BUCKET_NAME = 'jinkim-react-site'
+CLOUDFRONT_DISTRIBUTION_IDS = []
 
 # Path to the build directory.
 BUILD_DIR = 'build'
@@ -27,7 +28,32 @@ def upload_files_to_s3(build_dir: str, bucket_name: str):
         print(f'Failed to upload {file_path}: {e}')
 
 
+def invalidate_cloudfront(distribution_ids: list[str], paths: list, client):
+  try:
+    for distribution_id in distribution_ids:
+      response = client.create_invalidation(
+        DistributionId=distribution_id,
+        InvalidationBatch={
+          'Paths': {
+            'Quantity': len(paths),
+            'Items': paths
+          },
+          'CallerReference': str(hash(frozenset(paths)))  # unique string per request
+        }
+      )
+
+      invalidation_id = response['Invalidation']['Id']
+      print(f'Invalidation created: {invalidation_id}')
+  except ClientError as e:
+    print(f'Failed to create invalidation: {e}')
+
+
 if __name__ == '__main__':
   print("Uploading build to s3.")
   s3 = boto3.client('s3')
+
   upload_files_to_s3(BUILD_DIR, BUCKET_NAME)
+
+  print("Invalidating CloudFront cache...")
+  cloudfront = boto3.client('cloudfront')
+  invalidate_cloudfront(CLOUDFRONT_DISTRIBUTION_IDS, ['/*'], cloudfront)
