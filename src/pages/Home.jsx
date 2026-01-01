@@ -8,9 +8,10 @@ const EXTERNAL_LINKS = [
   { redirectTo: 'https://www.github.com/jinsung-kim', label: 'Github' },
   {
     redirectTo:
-      'https://us-central1-jinkim-backend.cloudfunctions.net/app/resume',
+        'https://jsk-blog-images.s3.us-west-2.amazonaws.com/JinKimResume.pdf',
     label: 'Resume',
   },
+  { redirectTo: 'https://vsco.co/code-jin/gallery', label: 'VSCO' },
   { redirectTo: 'https://www.thereadingcorner.net', label: 'Writing' },
   { redirectTo: 'https://www.linkedin.com/in/jin-k', label: 'LinkedIn' },
 ];
@@ -50,11 +51,13 @@ export default function Home() {
             (see my book blog here)
           </a>
           , catching waves, bouldering, and jamming on my bass guitar.
+            I also spend an excessive amount of time
+            making espresso.
         </div>
 
         <div className="desc-label">
           An NYU CS grad. Originally from
-          Seoul, currently based in NYC.
+          Seoul, raised in SF, currently based in NYC.
         </div>
 
         <div className="footer-links">
