@@ -15,7 +15,11 @@ const PROJECTS = [
         title: 'How do train time tables work in real time?',
         subtitle: 'An analysis of GTFS protocol to get the next Manhattan bound trains for the Morgan Stop'
     },
-    // TODO: Add Garmin analysis when it's done.
+    {
+        redirectTo: 'https://github.com/jinsung-kim/internet-experiments/blob/main/garmin_analysis.ipynb',
+        title: 'Garmin "Wrapped"',
+        subtitle: 'Exporting my workout logs to track the last 6 months of workouts logged on my Garmin'
+    }
     // TODO: Add Spotify stuff when it comes in.
 ]
 
