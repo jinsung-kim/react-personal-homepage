@@ -24,14 +24,14 @@ const WORK_EXPERIENCES = [
     {
         redirectTo: 'https://www.nytimes.com/2025/07/23/science/meta-computer-wristband-reardon.html?unlocked_article_code=1.ik8.e6Il.Vl1FxXROyFJR&smid=url-share',
         title: 'Meta',
-        subtitle: `Currently working on neural interface tech in Meta's Reality Labs - supporting NTI research on models, 
-    building out wristband experiences, and more`
+        subtitle: `Currently working on neural interface tech in Meta's Reality Labs - supporting NTI research on models for wearables, 
+    building out EMG experiences, and more`
     },
     {
         redirectTo: 'https://www.nudgetext.com',
         title: 'The Nudge',
         subtitle:
-            'Built out texting services, map/social features, and internal tools',
+            'Built out texting services, map/social features, and internal tools (Series A)',
     },
     {
         redirectTo:

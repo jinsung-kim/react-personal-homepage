@@ -5,6 +5,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Home from './pages/Home';
 import Work from './pages/Work';
 import posthog from 'posthog-js';
+import Misc from "./pages/Misc";
 
 if (typeof window !== 'undefined') {
     posthog.init('phc_sCvHzrDj0HZWNdUT1LHFj44kF16g0loQPJzbRxROE1h', {
@@ -28,11 +29,11 @@ const RedirectUrl = ({url}) => {
         <>
             <h5>Redirecting...</h5>
             <style jsx>{`
-        h5 {
-          font-size: 14px;
-          font-family: 'Roboto', sans-serif;
-        }
-      `}</style>
+                h5 {
+                    font-size: 14px;
+                    font-family: 'Roboto', sans-serif;
+                }
+            `}</style>
         </>
     );
 };
@@ -44,6 +45,7 @@ export default function App() {
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/work" element={<Work/>}/>
+                    <Route path="/misc" element={<Misc/>}/>
 
                     {/* Just redirects to my other websites. */}
                     <Route

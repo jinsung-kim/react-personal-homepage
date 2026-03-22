@@ -10,6 +10,10 @@ const TABS = [
         redirectTo: '../work',
         label: 'Work',
     },
+    {
+        redirectTo: '../misc',
+        label: "Misc"
+    }
 ];
 
 export default function Navbar({currentIndex}) {
