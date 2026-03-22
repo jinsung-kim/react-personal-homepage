@@ -52,10 +52,6 @@ export default function App() {
                         path="/blog"
                         element={<RedirectUrl url="https://www.thereadingcorner.net"/>}
                     />
-                    <Route
-                        path="/archive"
-                        element={<RedirectUrl url="https://archived-js.web.app/"/>}
-                    />
                 </Routes>
             </BrowserRouter>
         </>
