@@ -25,32 +25,32 @@ const WORK_EXPERIENCES = [
         redirectTo: 'https://www.nytimes.com/2025/07/23/science/meta-computer-wristband-reardon.html?unlocked_article_code=1.ik8.e6Il.Vl1FxXROyFJR&smid=url-share',
         title: 'Meta',
         subtitle: `Currently working on neural interface tech in Meta's Reality Labs - supporting NTI research on models for wearables, 
-    building out EMG experiences, and more`
+    building out EMG experiences, and more.`
     },
     {
         redirectTo: 'https://www.nudgetext.com',
         title: 'The Nudge',
         subtitle:
-            'Built out texting services, map/social features, and internal tools (Series A)',
+            'Built out texting services, map/social features, and internal tools (Series A).',
     },
     {
         redirectTo:
             'https://www.aboutamazon.com/news/retail/amazon-reimagines-in-store-shopping-with-amazon-style',
         title: 'Amazon',
         subtitle:
-            'Developed a sort and filtering demo using React to explore the feasibility of the library in Amazon Style',
+            'Developed a sort and filtering demo using React to explore the feasibility of the library in Amazon Style.',
     },
     {
         redirectTo: 'https://maps.trimble.com/',
         title: 'Trimble Maps',
         subtitle:
-            'Assisted clients with API usage, enhanced web request services, improved debugging features for geocoding requests',
+            'Assisted clients with API usage, enhanced web request services, improved debugging features for geocoding requests.',
     },
     {
         redirectTo: 'https://dl.acm.org/doi/10.1145/3491102.3501989',
         title: 'NYU Langone Mobility App',
         subtitle:
-            'Developed a native iOS app in partnership with Lighthouse specialists to help clinicians analyze gait',
+            'Developed a native iOS app in partnership with Lighthouse specialists to help clinicians analyze gait.',
     },
 ];
 
@@ -58,13 +58,13 @@ const FREELANCING = [
     {
         redirectTo: 'https://romr.app/',
         title: 'ROMR App',
-        subtitle: 'Created a social network app for sharing food and experiences',
+        subtitle: 'Created a social network app for sharing food and experiences.',
     },
     {
         redirectTo: null,
         title: 'Coffee Card',
         subtitle:
-            'Redesigned app with a light mode UI, architected a discount system, managed orders in vendor app',
+            'Redesigned app with a light mode UI, architected a discount system, managed orders in vendor app.',
     },
 ];
 
