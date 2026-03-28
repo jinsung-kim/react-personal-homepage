@@ -50,7 +50,7 @@ export default function Home() {
                     >
                         (see my book blog here)
                     </a>
-                    , catching waves, bouldering, and jamming on my bass guitar.
+                    , catching waves, and jamming on my bass guitar.
                     I also spend an excessive amount of time
                     making espresso.
                 </div>
