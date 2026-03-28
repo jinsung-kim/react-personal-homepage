@@ -7,8 +7,8 @@ import DataTable from "../components/DataTable";
 const PROJECTS = [
     {
         redirectTo: 'https://github.com/jinsung-kim/trompowsky-engine',
-        title: 'Building a chess engine from scratch (ineffectively)',
-        subtitle: 'Exploring mini max game theory, pruning techniques for efficiency, and the importance of testing.'
+        title: 'Building a (inefficient) chess engine from scratch',
+        subtitle: 'Exploring mini max game theory, pruning techniques for efficiency, and good testing practices.'
     },
     {
         redirectTo: 'https://github.com/jinsung-kim/internet-experiments/blob/main/mta_tracking.ipynb',
@@ -19,8 +19,12 @@ const PROJECTS = [
         redirectTo: 'https://github.com/jinsung-kim/internet-experiments/blob/main/garmin_analysis.ipynb',
         title: 'Garmin "Wrapped"',
         subtitle: 'Exporting my workout logs to track the last 6 months of workouts logged on my Garmin.'
+    },
+    {
+        redirectTo: 'https://github.com/jinsung-kim/advent-of-code/tree/main/2025',
+        title: 'Advent of Code 2025',
+        subtitle: 'Chose Python as my weapon of choice for the latest year.'
     }
-    // TODO: Add Spotify stuff when it comes in.
 ]
 
 export default function Misc() {
